@@ -5,6 +5,8 @@ namespace Pizza_Make_Order_Project
         public frmMainMenu()
         {
             InitializeComponent();
+
+            cmbHowManyPizzasValue.SelectedIndex = 0;
         }
     }
 }
