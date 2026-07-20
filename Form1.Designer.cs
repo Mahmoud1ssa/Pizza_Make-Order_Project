@@ -412,9 +412,10 @@
             // 
             // btnNext
             // 
-            btnNext.BackColor = Color.FromArgb(192, 255, 192);
-            btnNext.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNext.Location = new Point(527, 418);
+            btnNext.BackColor = Color.Transparent;
+            btnNext.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNext.ForeColor = Color.Black;
+            btnNext.Location = new Point(516, 418);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(157, 61);
             btnNext.TabIndex = 12;
@@ -423,8 +424,10 @@
             // 
             // btnReset
             // 
-            btnReset.BackColor = Color.Silver;
-            btnReset.Location = new Point(221, 418);
+            btnReset.BackColor = Color.Transparent;
+            btnReset.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReset.ForeColor = Color.Red;
+            btnReset.Location = new Point(270, 418);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(157, 61);
             btnReset.TabIndex = 13;
