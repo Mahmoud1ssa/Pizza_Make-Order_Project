@@ -59,15 +59,5 @@ namespace Pizza_Make_Order_Project.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Main_Form_Picture {
-            get {
-                object obj = ResourceManager.GetObject("Main Form Picture", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
