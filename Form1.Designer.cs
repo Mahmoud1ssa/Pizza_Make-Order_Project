@@ -267,6 +267,7 @@
             rdTakeOut.TabStop = true;
             rdTakeOut.Text = "Take Out";
             rdTakeOut.UseVisualStyleBackColor = true;
+            rdTakeOut.CheckedChanged += rdTakeOut_CheckedChanged;
             // 
             // rdEatIn
             // 
@@ -278,6 +279,7 @@
             rdEatIn.TabStop = true;
             rdEatIn.Text = "Eat In";
             rdEatIn.UseVisualStyleBackColor = true;
+            rdEatIn.CheckedChanged += rdEatIn_CheckedChanged;
             // 
             // grpOrderSummary
             // 
