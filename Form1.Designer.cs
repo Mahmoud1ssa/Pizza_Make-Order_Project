@@ -151,6 +151,7 @@
             chkGreenPeppers.TabIndex = 5;
             chkGreenPeppers.Text = "Green Peppers";
             chkGreenPeppers.UseVisualStyleBackColor = true;
+            chkGreenPeppers.CheckedChanged += chkGreenPeppers_CheckedChanged;
             // 
             // chkOlives
             // 
@@ -158,9 +159,10 @@
             chkOlives.Location = new Point(246, 70);
             chkOlives.Name = "chkOlives";
             chkOlives.Size = new Size(71, 24);
-            chkOlives.TabIndex = 4;
+            chkOlives.TabIndex = 3;
             chkOlives.Text = "Olives";
             chkOlives.UseVisualStyleBackColor = true;
+            chkOlives.CheckedChanged += chkOlives_CheckedChanged;
             // 
             // chkOnion
             // 
@@ -168,9 +170,10 @@
             chkOnion.Location = new Point(246, 32);
             chkOnion.Name = "chkOnion";
             chkOnion.Size = new Size(71, 24);
-            chkOnion.TabIndex = 3;
+            chkOnion.TabIndex = 1;
             chkOnion.Text = "Onion";
             chkOnion.UseVisualStyleBackColor = true;
+            chkOnion.CheckedChanged += chkOnion_CheckedChanged;
             // 
             // Tomatoes
             // 
@@ -178,9 +181,10 @@
             Tomatoes.Location = new Point(33, 103);
             Tomatoes.Name = "Tomatoes";
             Tomatoes.Size = new Size(96, 24);
-            Tomatoes.TabIndex = 2;
+            Tomatoes.TabIndex = 4;
             Tomatoes.Text = "Tomatoes";
             Tomatoes.UseVisualStyleBackColor = true;
+            Tomatoes.CheckedChanged += Tomatoes_CheckedChanged;
             // 
             // chkMushrooms
             // 
@@ -188,9 +192,10 @@
             chkMushrooms.Location = new Point(33, 67);
             chkMushrooms.Name = "chkMushrooms";
             chkMushrooms.Size = new Size(108, 24);
-            chkMushrooms.TabIndex = 1;
+            chkMushrooms.TabIndex = 2;
             chkMushrooms.Text = "Mushrooms";
             chkMushrooms.UseVisualStyleBackColor = true;
+            chkMushrooms.CheckedChanged += chkMushrooms_CheckedChanged;
             // 
             // chkExtraCheese
             // 
@@ -201,6 +206,7 @@
             chkExtraCheese.TabIndex = 0;
             chkExtraCheese.Text = "Extra Cheese";
             chkExtraCheese.UseVisualStyleBackColor = true;
+            chkExtraCheese.CheckedChanged += chkExtraCheese_CheckedChanged;
             // 
             // grpCrust
             // 
@@ -355,7 +361,7 @@
             // 
             // lblToppingsSumValue
             // 
-            lblToppingsSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblToppingsSumValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblToppingsSumValue.Location = new Point(26, 99);
             lblToppingsSumValue.Name = "lblToppingsSumValue";
             lblToppingsSumValue.Size = new Size(204, 87);
@@ -391,7 +397,7 @@
             // 
             // cmbHowManyPizzasValue
             // 
-            cmbHowManyPizzasValue.DropDownHeight = 60;
+            cmbHowManyPizzasValue.DropDownHeight = 100;
             cmbHowManyPizzasValue.FormattingEnabled = true;
             cmbHowManyPizzasValue.IntegralHeight = false;
             cmbHowManyPizzasValue.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
