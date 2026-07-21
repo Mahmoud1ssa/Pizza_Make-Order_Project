@@ -59,15 +59,5 @@ namespace Pizza_Make_Order_Project.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Pizza_Vampire_Logo_ {
-            get {
-                object obj = ResourceManager.GetObject("Pizza Vampire Logo ", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
