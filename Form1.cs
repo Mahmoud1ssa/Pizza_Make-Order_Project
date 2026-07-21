@@ -9,6 +9,8 @@ namespace Pizza_Make_Order_Project
             cmbHowManyPizzasValue.SelectedIndex = 0;
         }
 
+        Single TotalPrice = 0;
+
         //START grpToppings work...
 
         //This List is for the Texts of the check boxes inside the group box "grpToppings"
@@ -30,32 +32,38 @@ namespace Pizza_Make_Order_Project
 
         private void chkExtraCheese_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppingsSumValue(sender as CheckBox);
+            CheckBox chkTemp = sender as CheckBox;
+            UpdateToppingsSumValue(chkTemp);
         }
 
         private void chkOnion_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppingsSumValue(sender as CheckBox);
+            CheckBox chkTemp = sender as CheckBox;
+            UpdateToppingsSumValue(chkTemp);
         }
 
         private void chkMushrooms_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppingsSumValue(sender as CheckBox);
+            CheckBox chkTemp = sender as CheckBox;
+            UpdateToppingsSumValue(chkTemp);
         }
 
         private void chkOlives_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppingsSumValue(sender as CheckBox);
+            CheckBox chkTemp = sender as CheckBox;
+            UpdateToppingsSumValue(chkTemp);
         }
 
         private void Tomatoes_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppingsSumValue(sender as CheckBox);
+            CheckBox chkTemp = sender as CheckBox;
+            UpdateToppingsSumValue(chkTemp);
         }
 
         private void chkGreenPeppers_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateToppingsSumValue(sender as CheckBox);
+            CheckBox chkTemp = sender as CheckBox;
+            UpdateToppingsSumValue(chkTemp);
         }
 
         //END grpToppings work...
