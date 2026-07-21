@@ -30,7 +30,7 @@
         {
             lblMainMenuHeading = new Label();
             grpSize = new GroupBox();
-            rdLargSize = new RadioButton();
+            rdLargeSize = new RadioButton();
             rdMediumSize = new RadioButton();
             rdSmallSize = new RadioButton();
             grpToppings = new GroupBox();
@@ -82,7 +82,7 @@
             // 
             // grpSize
             // 
-            grpSize.Controls.Add(rdLargSize);
+            grpSize.Controls.Add(rdLargeSize);
             grpSize.Controls.Add(rdMediumSize);
             grpSize.Controls.Add(rdSmallSize);
             grpSize.FlatStyle = FlatStyle.System;
@@ -94,16 +94,17 @@
             grpSize.TabStop = false;
             grpSize.Text = "Size";
             // 
-            // rdLargSize
+            // rdLargeSize
             // 
-            rdLargSize.AutoSize = true;
-            rdLargSize.Location = new Point(30, 99);
-            rdLargSize.Name = "rdLargSize";
-            rdLargSize.Size = new Size(64, 27);
-            rdLargSize.TabIndex = 2;
-            rdLargSize.TabStop = true;
-            rdLargSize.Text = "Larg";
-            rdLargSize.UseVisualStyleBackColor = true;
+            rdLargeSize.AutoSize = true;
+            rdLargeSize.Location = new Point(30, 99);
+            rdLargeSize.Name = "rdLargeSize";
+            rdLargeSize.Size = new Size(73, 27);
+            rdLargeSize.TabIndex = 2;
+            rdLargeSize.TabStop = true;
+            rdLargeSize.Text = "Large";
+            rdLargeSize.UseVisualStyleBackColor = true;
+            rdLargeSize.CheckedChanged += rdLargeSize_CheckedChanged;
             // 
             // rdMediumSize
             // 
@@ -115,6 +116,7 @@
             rdMediumSize.TabStop = true;
             rdMediumSize.Text = "Medium";
             rdMediumSize.UseVisualStyleBackColor = true;
+            rdMediumSize.CheckedChanged += rdMediumSize_CheckedChanged;
             // 
             // rdSmallSize
             // 
@@ -126,6 +128,7 @@
             rdSmallSize.TabStop = true;
             rdSmallSize.Text = "Small";
             rdSmallSize.UseVisualStyleBackColor = true;
+            rdSmallSize.CheckedChanged += rdSmallSize_CheckedChanged;
             // 
             // grpToppings
             // 
@@ -229,6 +232,7 @@
             rdThickCrust.TabStop = true;
             rdThickCrust.Text = "Thick Crust";
             rdThickCrust.UseVisualStyleBackColor = true;
+            rdThickCrust.CheckedChanged += rdThickCrust_CheckedChanged;
             // 
             // rdThinCrust
             // 
@@ -240,6 +244,7 @@
             rdThinCrust.TabStop = true;
             rdThinCrust.Text = "Thin Crust";
             rdThinCrust.UseVisualStyleBackColor = true;
+            rdThinCrust.CheckedChanged += rdThinCrust_CheckedChanged;
             // 
             // grpWhereToEat
             // 
@@ -325,7 +330,7 @@
             // 
             // lblWhereToEatSumValue
             // 
-            lblWhereToEatSumValue.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWhereToEatSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblWhereToEatSumValue.Location = new Point(123, 276);
             lblWhereToEatSumValue.Name = "lblWhereToEatSumValue";
             lblWhereToEatSumValue.Size = new Size(107, 25);
@@ -343,8 +348,9 @@
             // 
             // lblCrustTypeSumValue
             // 
-            lblCrustTypeSumValue.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCrustTypeSumValue.Location = new Point(137, 198);
+            lblCrustTypeSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCrustTypeSumValue.ImageAlign = ContentAlignment.BottomCenter;
+            lblCrustTypeSumValue.Location = new Point(137, 200);
             lblCrustTypeSumValue.Name = "lblCrustTypeSumValue";
             lblCrustTypeSumValue.Size = new Size(107, 25);
             lblCrustTypeSumValue.TabIndex = 11;
@@ -361,10 +367,10 @@
             // 
             // lblToppingsSumValue
             // 
-            lblToppingsSumValue.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblToppingsSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblToppingsSumValue.Location = new Point(26, 99);
             lblToppingsSumValue.Name = "lblToppingsSumValue";
-            lblToppingsSumValue.Size = new Size(204, 87);
+            lblToppingsSumValue.Size = new Size(204, 99);
             lblToppingsSumValue.TabIndex = 9;
             // 
             // lblToppingsSum
@@ -476,7 +482,7 @@
         private Label lblMainMenuHeading;
         private GroupBox grpSize;
         private RadioButton rdSmallSize;
-        private RadioButton rdLargSize;
+        private RadioButton rdLargeSize;
         private RadioButton rdMediumSize;
         private GroupBox grpToppings;
         private CheckBox chkGreenPeppers;
