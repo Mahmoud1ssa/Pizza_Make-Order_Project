@@ -99,5 +99,23 @@ namespace Pizza_Make_Order_Project
         }
 
         //END grpSize work...
+
+
+        //START grpWhereToEat work...
+
+        private void rdEatIn_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblWhereToEatSumValue.Text = rdTemp.Text;
+        }
+
+        private void rdTakeOut_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblWhereToEatSumValue.Text = rdTemp.Text;
+        }
+
+        //END grpWhereToEat work...
+
     }
 }
