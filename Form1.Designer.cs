@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             lblMainMenuHeading = new Label();
             grpSize = new GroupBox();
             rdLargeSize = new RadioButton();
@@ -478,6 +479,7 @@
             Controls.Add(grpToppings);
             Controls.Add(grpSize);
             Controls.Add(lblMainMenuHeading);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMainMenu";
             Text = "Pizza Vampires";
             grpSize.ResumeLayout(false);
