@@ -461,6 +461,7 @@
             btnReset.TabIndex = 13;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
             // 
             // frmMainMenu
             // 
