@@ -6,8 +6,10 @@ namespace Pizza_Make_Order_Project
         {
             InitializeComponent();
 
-            cmbHowManyPizzasValue.SelectedIndex = 1;
+            cmbHowManyPizzasValue.SelectedIndex = 0;
         }
+
+        //START grpToppings work...
 
         //This List is for the Texts of the check boxes inside the group box "grpToppings"
         List<string> grp_chksTexts = new List<string>();
@@ -23,7 +25,7 @@ namespace Pizza_Make_Order_Project
                 grp_chksTexts.Remove(chkTemp.Text);
 
 
-                lblToppingsSumValue.Text = String.Join(" ,", grp_chksTexts);
+            lblToppingsSumValue.Text = String.Join(" ,", grp_chksTexts);
         }
 
         private void chkExtraCheese_CheckedChanged(object sender, EventArgs e)
@@ -55,5 +57,47 @@ namespace Pizza_Make_Order_Project
         {
             UpdateToppingsSumValue(sender as CheckBox);
         }
+
+        //END grpToppings work...
+
+
+        //START grpSize work...
+
+        private void rdSmallSize_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblSizeSumValue.Text = rdTemp.Text;
+        }
+
+        private void rdMediumSize_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblSizeSumValue.Text = rdTemp.Text;
+        }
+
+        private void rdLargeSize_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblSizeSumValue.Text = rdTemp.Text;
+        }
+
+        //END grpSize work...
+
+
+        //START grpCrust work...
+
+        private void rdThinCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblCrustTypeSumValue.Text = rdTemp.Text;
+        }
+
+        private void rdThickCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton rdTemp = sender as RadioButton;
+            lblCrustTypeSumValue.Text = rdTemp.Text;
+        }
+
+        //END grpSize work...
     }
 }
