@@ -217,5 +217,19 @@ namespace Pizza_Make_Order_Project
         {
             RecalculateTotalPrice();
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure You Want To Reset You Order?",
+                "Reset",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                frmMainMenu frm_New_MainMenu = new frmMainMenu();
+                frm_New_MainMenu.Show();
+                this.Hide();
+            }
+        }
     }
 }
