@@ -37,7 +37,7 @@
             chkGreenPeppers = new CheckBox();
             chkOlives = new CheckBox();
             chkOnion = new CheckBox();
-            Tomatoes = new CheckBox();
+            chkTomatoes = new CheckBox();
             chkMushrooms = new CheckBox();
             chkExtraCheese = new CheckBox();
             grpCrust = new GroupBox();
@@ -102,6 +102,7 @@
             rdLargeSize.Size = new Size(73, 27);
             rdLargeSize.TabIndex = 2;
             rdLargeSize.TabStop = true;
+            rdLargeSize.Tag = "3";
             rdLargeSize.Text = "Large";
             rdLargeSize.UseVisualStyleBackColor = true;
             rdLargeSize.CheckedChanged += rdLargeSize_CheckedChanged;
@@ -114,6 +115,7 @@
             rdMediumSize.Size = new Size(94, 27);
             rdMediumSize.TabIndex = 1;
             rdMediumSize.TabStop = true;
+            rdMediumSize.Tag = "2";
             rdMediumSize.Text = "Medium";
             rdMediumSize.UseVisualStyleBackColor = true;
             rdMediumSize.CheckedChanged += rdMediumSize_CheckedChanged;
@@ -126,6 +128,7 @@
             rdSmallSize.Size = new Size(72, 27);
             rdSmallSize.TabIndex = 0;
             rdSmallSize.TabStop = true;
+            rdSmallSize.Tag = "1";
             rdSmallSize.Text = "Small";
             rdSmallSize.UseVisualStyleBackColor = true;
             rdSmallSize.CheckedChanged += rdSmallSize_CheckedChanged;
@@ -135,7 +138,7 @@
             grpToppings.Controls.Add(chkGreenPeppers);
             grpToppings.Controls.Add(chkOlives);
             grpToppings.Controls.Add(chkOnion);
-            grpToppings.Controls.Add(Tomatoes);
+            grpToppings.Controls.Add(chkTomatoes);
             grpToppings.Controls.Add(chkMushrooms);
             grpToppings.Controls.Add(chkExtraCheese);
             grpToppings.Location = new Point(316, 107);
@@ -152,6 +155,7 @@
             chkGreenPeppers.Name = "chkGreenPeppers";
             chkGreenPeppers.Size = new Size(126, 24);
             chkGreenPeppers.TabIndex = 5;
+            chkGreenPeppers.Tag = "0.2";
             chkGreenPeppers.Text = "Green Peppers";
             chkGreenPeppers.UseVisualStyleBackColor = true;
             chkGreenPeppers.CheckedChanged += chkGreenPeppers_CheckedChanged;
@@ -163,6 +167,7 @@
             chkOlives.Name = "chkOlives";
             chkOlives.Size = new Size(71, 24);
             chkOlives.TabIndex = 3;
+            chkOlives.Tag = "0.1";
             chkOlives.Text = "Olives";
             chkOlives.UseVisualStyleBackColor = true;
             chkOlives.CheckedChanged += chkOlives_CheckedChanged;
@@ -174,20 +179,20 @@
             chkOnion.Name = "chkOnion";
             chkOnion.Size = new Size(71, 24);
             chkOnion.TabIndex = 1;
+            chkOnion.Tag = "0.2";
             chkOnion.Text = "Onion";
             chkOnion.UseVisualStyleBackColor = true;
             chkOnion.CheckedChanged += chkOnion_CheckedChanged;
             // 
-            // Tomatoes
+            // chkTomatoes
             // 
-            Tomatoes.AutoSize = true;
-            Tomatoes.Location = new Point(33, 103);
-            Tomatoes.Name = "Tomatoes";
-            Tomatoes.Size = new Size(96, 24);
-            Tomatoes.TabIndex = 4;
-            Tomatoes.Text = "Tomatoes";
-            Tomatoes.UseVisualStyleBackColor = true;
-            Tomatoes.CheckedChanged += Tomatoes_CheckedChanged;
+            chkTomatoes.Location = new Point(33, 103);
+            chkTomatoes.Name = "chkTomatoes";
+            chkTomatoes.Size = new Size(104, 24);
+            chkTomatoes.TabIndex = 4;
+            chkTomatoes.Tag = "0.2";
+            chkTomatoes.Text = "Tomatoes";
+            chkTomatoes.CheckedChanged += chkTomatoes_CheckedChanged;
             // 
             // chkMushrooms
             // 
@@ -196,6 +201,7 @@
             chkMushrooms.Name = "chkMushrooms";
             chkMushrooms.Size = new Size(108, 24);
             chkMushrooms.TabIndex = 2;
+            chkMushrooms.Tag = "1";
             chkMushrooms.Text = "Mushrooms";
             chkMushrooms.UseVisualStyleBackColor = true;
             chkMushrooms.CheckedChanged += chkMushrooms_CheckedChanged;
@@ -207,6 +213,7 @@
             chkExtraCheese.Name = "chkExtraCheese";
             chkExtraCheese.Size = new Size(115, 24);
             chkExtraCheese.TabIndex = 0;
+            chkExtraCheese.Tag = "0.5";
             chkExtraCheese.Text = "Extra Cheese";
             chkExtraCheese.UseVisualStyleBackColor = true;
             chkExtraCheese.CheckedChanged += chkExtraCheese_CheckedChanged;
@@ -230,6 +237,7 @@
             rdThickCrust.Size = new Size(101, 24);
             rdThickCrust.TabIndex = 3;
             rdThickCrust.TabStop = true;
+            rdThickCrust.Tag = "0.6";
             rdThickCrust.Text = "Thick Crust";
             rdThickCrust.UseVisualStyleBackColor = true;
             rdThickCrust.CheckedChanged += rdThickCrust_CheckedChanged;
@@ -242,6 +250,7 @@
             rdThinCrust.Size = new Size(95, 24);
             rdThinCrust.TabIndex = 2;
             rdThinCrust.TabStop = true;
+            rdThinCrust.Tag = "0.3";
             rdThinCrust.Text = "Thin Crust";
             rdThinCrust.UseVisualStyleBackColor = true;
             rdThinCrust.CheckedChanged += rdThinCrust_CheckedChanged;
@@ -265,6 +274,7 @@
             rdTakeOut.Size = new Size(87, 24);
             rdTakeOut.TabIndex = 4;
             rdTakeOut.TabStop = true;
+            rdTakeOut.Tag = "0";
             rdTakeOut.Text = "Take Out";
             rdTakeOut.UseVisualStyleBackColor = true;
             rdTakeOut.CheckedChanged += rdTakeOut_CheckedChanged;
@@ -277,6 +287,7 @@
             rdEatIn.Size = new Size(67, 24);
             rdEatIn.TabIndex = 3;
             rdEatIn.TabStop = true;
+            rdEatIn.Tag = "0.5";
             rdEatIn.Text = "Eat In";
             rdEatIn.UseVisualStyleBackColor = true;
             rdEatIn.CheckedChanged += rdEatIn_CheckedChanged;
@@ -315,10 +326,12 @@
             // 
             lblTotalPriceSumValue.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalPriceSumValue.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalPriceSumValue.Location = new Point(148, 336);
+            lblTotalPriceSumValue.ImageAlign = ContentAlignment.BottomLeft;
+            lblTotalPriceSumValue.Location = new Point(83, 336);
             lblTotalPriceSumValue.Name = "lblTotalPriceSumValue";
-            lblTotalPriceSumValue.Size = new Size(67, 58);
+            lblTotalPriceSumValue.Size = new Size(132, 58);
             lblTotalPriceSumValue.TabIndex = 15;
+            lblTotalPriceSumValue.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblTotalPriceSum
             // 
@@ -333,7 +346,7 @@
             // lblWhereToEatSumValue
             // 
             lblWhereToEatSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblWhereToEatSumValue.Location = new Point(123, 276);
+            lblWhereToEatSumValue.Location = new Point(137, 274);
             lblWhereToEatSumValue.Name = "lblWhereToEatSumValue";
             lblWhereToEatSumValue.Size = new Size(107, 25);
             lblWhereToEatSumValue.TabIndex = 13;
@@ -413,6 +426,7 @@
             cmbHowManyPizzasValue.Name = "cmbHowManyPizzasValue";
             cmbHowManyPizzasValue.Size = new Size(53, 28);
             cmbHowManyPizzasValue.TabIndex = 6;
+            cmbHowManyPizzasValue.SelectedIndexChanged += cmbHowManyPizzasValue_SelectedIndexChanged;
             // 
             // lblHowManyPizzas
             // 
@@ -490,7 +504,7 @@
         private CheckBox chkGreenPeppers;
         private CheckBox chkOlives;
         private CheckBox chkOnion;
-        private CheckBox Tomatoes;
+        private CheckBox chkTomatoes;
         private CheckBox chkMushrooms;
         private CheckBox chkExtraCheese;
         private GroupBox grpCrust;
