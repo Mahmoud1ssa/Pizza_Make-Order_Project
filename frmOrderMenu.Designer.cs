@@ -148,27 +148,27 @@
             grpSum.Controls.Add(lblPhoneSum);
             grpSum.Controls.Add(label6);
             grpSum.Controls.Add(lblNameSum);
-            grpSum.Location = new Point(835, 126);
+            grpSum.Location = new Point(607, 126);
             grpSum.Name = "grpSum";
-            grpSum.Size = new Size(294, 238);
+            grpSum.Size = new Size(522, 238);
             grpSum.TabIndex = 9;
             grpSum.TabStop = false;
             grpSum.Text = "Summary";
             // 
             // txtPhoneSumValue
             // 
-            txtPhoneSumValue.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPhoneSumValue.Location = new Point(23, 180);
+            txtPhoneSumValue.Font = new Font("Segoe UI", 10.2F);
+            txtPhoneSumValue.Location = new Point(83, 127);
             txtPhoneSumValue.Name = "txtPhoneSumValue";
             txtPhoneSumValue.Size = new Size(249, 45);
             txtPhoneSumValue.TabIndex = 10;
             // 
             // txtNameSumValue
             // 
-            txtNameSumValue.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNameSumValue.Location = new Point(21, 88);
+            txtNameSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNameSumValue.Location = new Point(83, 41);
             txtNameSumValue.Name = "txtNameSumValue";
-            txtNameSumValue.Size = new Size(249, 45);
+            txtNameSumValue.Size = new Size(212, 30);
             txtNameSumValue.TabIndex = 5;
             // 
             // label8
@@ -202,7 +202,7 @@
             // 
             lblNameSum.AutoSize = true;
             lblNameSum.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNameSum.Location = new Point(6, 47);
+            lblNameSum.Location = new Point(6, 41);
             lblNameSum.Name = "lblNameSum";
             lblNameSum.Size = new Size(67, 25);
             lblNameSum.TabIndex = 1;
