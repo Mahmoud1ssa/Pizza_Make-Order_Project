@@ -220,7 +220,7 @@ namespace Pizza_Make_Order_Project
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure You Want To Reset You Order?",
+            if (MessageBox.Show("Are You Sure You Want To Reset Your Order?",
                 "Reset",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Warning,
@@ -230,6 +230,21 @@ namespace Pizza_Make_Order_Project
                 frm_New_MainMenu.Show();
                 this.Hide();
             }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure You Want To Move To Next Step?",
+    "Next Step",
+    MessageBoxButtons.OKCancel,
+    MessageBoxIcon.Warning,
+    MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                frmOrderMenu frmOrderMenu = new frmOrderMenu();
+                frmOrderMenu.Show();
+                this.Hide();
+            }
+
         }
     }
 }
