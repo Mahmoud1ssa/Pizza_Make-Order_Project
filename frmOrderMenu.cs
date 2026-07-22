@@ -34,10 +34,26 @@ namespace Pizza_Make_Order_Project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure You Want to Discard Changes And Go Back?", "Go Back", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("Are You Sure You Want to Discard Changes And Go Back?", "Go Back", MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 this.Tag = 0;
                 this.Close();
+            }
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            if (txtNameValue.Text == String.Empty)
+            {
+                MessageBox.Show("Please Enter A Name Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtPhoneValue.Text == String.Empty || txtPhoneValue.Text.Substring(0, 2) != "09")
+            {
+                MessageBox.Show("Please Enter A Valid Phone Number Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(txtLocationValue.Text ==String.Empty)
+            {
+                MessageBox.Show("Please Enter Your Palace Location Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

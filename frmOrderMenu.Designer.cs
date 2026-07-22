@@ -143,6 +143,7 @@
             btnOrder.TabIndex = 8;
             btnOrder.Text = "Order";
             btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += btnOrder_Click;
             // 
             // grpSum
             // 

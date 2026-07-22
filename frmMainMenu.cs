@@ -79,7 +79,39 @@ namespace Pizza_Make_Order_Project
                 {
                     switch (rdTemp.Name)
                     {
-                        case "rdEatIn": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdEatIn":
+                            {
+                                switch (selecteditemincmb)
+                                {
+                                    case >= 1 and <= 4:
+                                        {
+                                            TotalPrice += Convert.ToDouble(rdTemp.Tag) * 1;
+                                            break;
+                                        }
+                                    case >= 5 and <= 8:
+                                        {
+                                            TotalPrice += Convert.ToDouble(rdTemp.Tag) * 2;
+                                            break;
+                                        }
+                                    case >= 9 and <= 12:
+                                        {
+                                            TotalPrice += Convert.ToDouble(rdTemp.Tag) * 3;
+                                            break;
+                                        }
+                                    case >= 13 and <= 16:
+                                        {
+                                            TotalPrice += Convert.ToDouble(rdTemp.Tag) * 4;
+                                            break;
+                                        }
+                                    case >= 17 and <= 20:
+                                        {
+                                            TotalPrice += Convert.ToDouble(rdTemp.Tag) * 5;
+                                            break;
+                                        }
+                                }
+
+                                break;
+                            }
 
                         case "rdTakeOut": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
                     }
