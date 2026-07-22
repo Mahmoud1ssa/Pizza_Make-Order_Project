@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
             lblMainMenuHeading = new Label();
             grpSize = new GroupBox();
             rdLargeSize = new RadioButton();
@@ -72,11 +73,11 @@
             // lblMainMenuHeading
             // 
             lblMainMenuHeading.AutoSize = true;
-            lblMainMenuHeading.Font = new Font("Showcard Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMainMenuHeading.Font = new Font("Permanent Marker", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMainMenuHeading.ForeColor = Color.Red;
             lblMainMenuHeading.Location = new Point(308, 32);
             lblMainMenuHeading.Name = "lblMainMenuHeading";
-            lblMainMenuHeading.Size = new Size(573, 50);
+            lblMainMenuHeading.Size = new Size(541, 57);
             lblMainMenuHeading.TabIndex = 0;
             lblMainMenuHeading.Text = "Make Your Pizza Vampire!";
             // 
@@ -449,6 +450,7 @@
             btnNext.TabIndex = 12;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = false;
+            btnNext.Click += btnNext_Click;
             // 
             // btnReset
             // 
@@ -478,6 +480,7 @@
             Controls.Add(grpToppings);
             Controls.Add(grpSize);
             Controls.Add(lblMainMenuHeading);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMainMenu";
             Text = "Pizza Vampires";
             grpSize.ResumeLayout(false);
