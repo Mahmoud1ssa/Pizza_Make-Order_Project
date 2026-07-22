@@ -59,5 +59,15 @@ namespace Pizza_Make_Order_Project.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Pizza_Vampire_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Pizza Vampire Logo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
