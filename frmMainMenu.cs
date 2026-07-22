@@ -240,11 +240,15 @@ namespace Pizza_Make_Order_Project
     MessageBoxIcon.Warning,
     MessageBoxDefaultButton.Button2) == DialogResult.OK)
             {
-                frmOrderMenu frmOrderMenu = new frmOrderMenu();
-                frmOrderMenu.Show();
+                frmOrderMenu objfrmOrderMenu = new frmOrderMenu();
                 this.Hide();
-            }
+                objfrmOrderMenu.ShowDialog();
 
+                if(Convert.ToInt32(objfrmOrderMenu.Tag) == 0)
+                    this.Show();
+                else
+                    this.Close();
+            }
         }
     }
 }

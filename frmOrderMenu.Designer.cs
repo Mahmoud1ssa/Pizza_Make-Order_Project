@@ -131,6 +131,7 @@
             btnBack.TabIndex = 7;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // btnOrder
             // 
@@ -239,6 +240,7 @@
             Controls.Add(lblName);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmOrderMenu";
+            Tag = "1";
             Text = "Pizza Vampires";
             grpSum.ResumeLayout(false);
             grpSum.PerformLayout();
