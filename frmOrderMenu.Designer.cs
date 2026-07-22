@@ -39,9 +39,10 @@
             btnBack = new Button();
             btnOrder = new Button();
             grpSum = new GroupBox();
-            txtPhoneSumValue = new Label();
-            txtNameSumValue = new Label();
-            label8 = new Label();
+            lblLocationSumValue = new Label();
+            label1 = new Label();
+            lblPhoneSumValue = new Label();
+            lblNameSumValue = new Label();
             lblPhoneSum = new Label();
             label6 = new Label();
             lblNameSum = new Label();
@@ -52,7 +53,7 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblName.Location = new Point(66, 127);
+            lblName.Location = new Point(12, 127);
             lblName.Name = "lblName";
             lblName.Size = new Size(219, 25);
             lblName.TabIndex = 0;
@@ -63,7 +64,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Permanent Marker", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(301, 33);
+            label2.Location = new Point(287, 33);
             label2.Name = "label2";
             label2.Size = new Size(558, 57);
             label2.TabIndex = 1;
@@ -73,17 +74,17 @@
             // 
             txtNameValue.BackColor = SystemColors.MenuBar;
             txtNameValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNameValue.Location = new Point(372, 126);
+            txtNameValue.Location = new Point(318, 126);
             txtNameValue.Name = "txtNameValue";
             txtNameValue.Size = new Size(212, 30);
             txtNameValue.TabIndex = 2;
-            txtNameValue.Leave += txtNameLeave;
+            txtNameValue.Leave += txtNameValueLeave;
             // 
             // lblPhone
             // 
             lblPhone.AutoSize = true;
             lblPhone.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPhone.Location = new Point(66, 173);
+            lblPhone.Location = new Point(12, 173);
             lblPhone.Name = "lblPhone";
             lblPhone.Size = new Size(298, 25);
             lblPhone.TabIndex = 3;
@@ -93,16 +94,17 @@
             // 
             txtPhoneValue.BackColor = SystemColors.MenuBar;
             txtPhoneValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPhoneValue.Location = new Point(372, 173);
+            txtPhoneValue.Location = new Point(318, 173);
             txtPhoneValue.Name = "txtPhoneValue";
             txtPhoneValue.Size = new Size(212, 30);
             txtPhoneValue.TabIndex = 4;
+            txtPhoneValue.Leave += txtPhoneValueLeave;
             // 
             // lblLocation
             // 
             lblLocation.AutoSize = true;
             lblLocation.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLocation.Location = new Point(66, 251);
+            lblLocation.Location = new Point(12, 251);
             lblLocation.Name = "lblLocation";
             lblLocation.Size = new Size(404, 25);
             lblLocation.TabIndex = 5;
@@ -112,17 +114,18 @@
             // 
             txtLocationValue.BackColor = SystemColors.MenuBar;
             txtLocationValue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLocationValue.Location = new Point(66, 279);
+            txtLocationValue.Location = new Point(12, 279);
             txtLocationValue.Multiline = true;
             txtLocationValue.Name = "txtLocationValue";
             txtLocationValue.Size = new Size(518, 102);
             txtLocationValue.TabIndex = 6;
+            txtLocationValue.Leave += txtLocationValueLeave;
             // 
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             btnBack.ForeColor = Color.Red;
-            btnBack.Location = new Point(372, 416);
+            btnBack.Location = new Point(373, 416);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(157, 61);
             btnBack.TabIndex = 7;
@@ -133,7 +136,7 @@
             // 
             btnOrder.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             btnOrder.ForeColor = Color.FromArgb(0, 192, 0);
-            btnOrder.Location = new Point(667, 416);
+            btnOrder.Location = new Point(669, 416);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(157, 61);
             btnOrder.TabIndex = 8;
@@ -142,48 +145,59 @@
             // 
             // grpSum
             // 
-            grpSum.Controls.Add(txtPhoneSumValue);
-            grpSum.Controls.Add(txtNameSumValue);
-            grpSum.Controls.Add(label8);
+            grpSum.Controls.Add(lblLocationSumValue);
+            grpSum.Controls.Add(label1);
+            grpSum.Controls.Add(lblPhoneSumValue);
+            grpSum.Controls.Add(lblNameSumValue);
             grpSum.Controls.Add(lblPhoneSum);
             grpSum.Controls.Add(label6);
             grpSum.Controls.Add(lblNameSum);
-            grpSum.Location = new Point(607, 126);
+            grpSum.Location = new Point(586, 126);
             grpSum.Name = "grpSum";
-            grpSum.Size = new Size(522, 238);
+            grpSum.Size = new Size(554, 255);
             grpSum.TabIndex = 9;
             grpSum.TabStop = false;
             grpSum.Text = "Summary";
             // 
-            // txtPhoneSumValue
+            // lblLocationSumValue
             // 
-            txtPhoneSumValue.Font = new Font("Segoe UI", 10.2F);
-            txtPhoneSumValue.Location = new Point(83, 127);
-            txtPhoneSumValue.Name = "txtPhoneSumValue";
-            txtPhoneSumValue.Size = new Size(249, 45);
-            txtPhoneSumValue.TabIndex = 10;
+            lblLocationSumValue.Font = new Font("Segoe UI", 10.2F);
+            lblLocationSumValue.Location = new Point(6, 150);
+            lblLocationSumValue.Name = "lblLocationSumValue";
+            lblLocationSumValue.Size = new Size(518, 102);
+            lblLocationSumValue.TabIndex = 12;
             // 
-            // txtNameSumValue
+            // label1
             // 
-            txtNameSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNameSumValue.Location = new Point(83, 41);
-            txtNameSumValue.Name = "txtNameSumValue";
-            txtNameSumValue.Size = new Size(212, 30);
-            txtNameSumValue.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(6, 125);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 25);
+            label1.TabIndex = 11;
+            label1.Text = "Location:";
             // 
-            // label8
+            // lblPhoneSumValue
             // 
-            label8.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(21, 88);
-            label8.Name = "label8";
-            label8.Size = new Size(249, 45);
-            label8.TabIndex = 4;
+            lblPhoneSumValue.Font = new Font("Segoe UI", 10.2F);
+            lblPhoneSumValue.Location = new Point(83, 86);
+            lblPhoneSumValue.Name = "lblPhoneSumValue";
+            lblPhoneSumValue.Size = new Size(441, 30);
+            lblPhoneSumValue.TabIndex = 10;
+            // 
+            // lblNameSumValue
+            // 
+            lblNameSumValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNameSumValue.Location = new Point(83, 41);
+            lblNameSumValue.Name = "lblNameSumValue";
+            lblNameSumValue.Size = new Size(441, 30);
+            lblNameSumValue.TabIndex = 5;
             // 
             // lblPhoneSum
             // 
             lblPhoneSum.AutoSize = true;
             lblPhoneSum.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPhoneSum.Location = new Point(6, 142);
+            lblPhoneSum.Location = new Point(6, 84);
             lblPhoneSum.Name = "lblPhoneSum";
             lblPhoneSum.Size = new Size(71, 25);
             lblPhoneSum.TabIndex = 3;
@@ -202,7 +216,7 @@
             // 
             lblNameSum.AutoSize = true;
             lblNameSum.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNameSum.Location = new Point(6, 41);
+            lblNameSum.Location = new Point(6, 39);
             lblNameSum.Name = "lblNameSum";
             lblNameSum.Size = new Size(67, 25);
             lblNameSum.TabIndex = 1;
@@ -246,9 +260,10 @@
         private GroupBox grpSum;
         private Label label6;
         private Label lblNameSum;
-        private Label txtPhoneSumValue;
-        private Label txtNameSumValue;
-        private Label label8;
+        private Label lblPhoneSumValue;
+        private Label lblNameSumValue;
         private Label lblPhoneSum;
+        private Label label1;
+        private Label lblLocationSumValue;
     }
 }
