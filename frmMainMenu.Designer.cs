@@ -105,7 +105,6 @@
             rdLargeSize.Name = "rdLargeSize";
             rdLargeSize.Size = new Size(69, 24);
             rdLargeSize.TabIndex = 2;
-            rdLargeSize.TabStop = true;
             rdLargeSize.Tag = "3";
             rdLargeSize.Text = "Large";
             rdLargeSize.UseVisualStyleBackColor = true;
@@ -120,7 +119,6 @@
             rdMediumSize.Name = "rdMediumSize";
             rdMediumSize.Size = new Size(88, 24);
             rdMediumSize.TabIndex = 1;
-            rdMediumSize.TabStop = true;
             rdMediumSize.Tag = "2";
             rdMediumSize.Text = "Medium";
             rdMediumSize.UseVisualStyleBackColor = true;
@@ -129,6 +127,7 @@
             // rdSmallSize
             // 
             rdSmallSize.AutoSize = true;
+            rdSmallSize.Checked = true;
             rdSmallSize.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             rdSmallSize.ForeColor = SystemColors.ControlText;
             rdSmallSize.Location = new Point(30, 29);
@@ -260,7 +259,6 @@
             rdThickCrust.Name = "rdThickCrust";
             rdThickCrust.Size = new Size(108, 24);
             rdThickCrust.TabIndex = 3;
-            rdThickCrust.TabStop = true;
             rdThickCrust.Tag = "0.6";
             rdThickCrust.Text = "Thick Crust";
             rdThickCrust.UseVisualStyleBackColor = true;
@@ -269,6 +267,7 @@
             // rdThinCrust
             // 
             rdThinCrust.AutoSize = true;
+            rdThinCrust.Checked = true;
             rdThinCrust.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             rdThinCrust.ForeColor = SystemColors.ControlText;
             rdThinCrust.Location = new Point(30, 26);
@@ -303,7 +302,6 @@
             rdTakeOut.Name = "rdTakeOut";
             rdTakeOut.Size = new Size(92, 24);
             rdTakeOut.TabIndex = 4;
-            rdTakeOut.TabStop = true;
             rdTakeOut.Tag = "0";
             rdTakeOut.Text = "Take Out";
             rdTakeOut.UseVisualStyleBackColor = true;
@@ -312,6 +310,7 @@
             // rdEatIn
             // 
             rdEatIn.AutoSize = true;
+            rdEatIn.Checked = true;
             rdEatIn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             rdEatIn.ForeColor = SystemColors.ControlText;
             rdEatIn.Location = new Point(44, 26);
