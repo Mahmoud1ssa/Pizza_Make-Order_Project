@@ -73,6 +73,7 @@
             // lblMainMenuHeading
             // 
             lblMainMenuHeading.AutoSize = true;
+            lblMainMenuHeading.BackColor = Color.Transparent;
             lblMainMenuHeading.Font = new Font("Permanent Marker", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMainMenuHeading.ForeColor = Color.Red;
             lblMainMenuHeading.Location = new Point(308, 32);
@@ -83,11 +84,11 @@
             // 
             // grpSize
             // 
+            grpSize.BackColor = Color.Transparent;
             grpSize.Controls.Add(rdLargeSize);
             grpSize.Controls.Add(rdMediumSize);
             grpSize.Controls.Add(rdSmallSize);
-            grpSize.FlatStyle = FlatStyle.System;
-            grpSize.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpSize.Font = new Font("Showcard Gothic", 10.2F);
             grpSize.Location = new Point(94, 107);
             grpSize.Name = "grpSize";
             grpSize.Size = new Size(186, 149);
@@ -98,11 +99,12 @@
             // rdLargeSize
             // 
             rdLargeSize.AutoSize = true;
+            rdLargeSize.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdLargeSize.ForeColor = SystemColors.ControlText;
             rdLargeSize.Location = new Point(30, 99);
             rdLargeSize.Name = "rdLargeSize";
-            rdLargeSize.Size = new Size(73, 27);
+            rdLargeSize.Size = new Size(69, 24);
             rdLargeSize.TabIndex = 2;
-            rdLargeSize.TabStop = true;
             rdLargeSize.Tag = "3";
             rdLargeSize.Text = "Large";
             rdLargeSize.UseVisualStyleBackColor = true;
@@ -111,11 +113,12 @@
             // rdMediumSize
             // 
             rdMediumSize.AutoSize = true;
+            rdMediumSize.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdMediumSize.ForeColor = SystemColors.ControlText;
             rdMediumSize.Location = new Point(30, 64);
             rdMediumSize.Name = "rdMediumSize";
-            rdMediumSize.Size = new Size(94, 27);
+            rdMediumSize.Size = new Size(88, 24);
             rdMediumSize.TabIndex = 1;
-            rdMediumSize.TabStop = true;
             rdMediumSize.Tag = "2";
             rdMediumSize.Text = "Medium";
             rdMediumSize.UseVisualStyleBackColor = true;
@@ -124,9 +127,12 @@
             // rdSmallSize
             // 
             rdSmallSize.AutoSize = true;
+            rdSmallSize.Checked = true;
+            rdSmallSize.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdSmallSize.ForeColor = SystemColors.ControlText;
             rdSmallSize.Location = new Point(30, 29);
             rdSmallSize.Name = "rdSmallSize";
-            rdSmallSize.Size = new Size(72, 27);
+            rdSmallSize.Size = new Size(68, 24);
             rdSmallSize.TabIndex = 0;
             rdSmallSize.TabStop = true;
             rdSmallSize.Tag = "1";
@@ -136,12 +142,14 @@
             // 
             // grpToppings
             // 
+            grpToppings.BackColor = Color.Transparent;
             grpToppings.Controls.Add(chkGreenPeppers);
             grpToppings.Controls.Add(chkOlives);
             grpToppings.Controls.Add(chkOnion);
             grpToppings.Controls.Add(chkTomatoes);
             grpToppings.Controls.Add(chkMushrooms);
             grpToppings.Controls.Add(chkExtraCheese);
+            grpToppings.Font = new Font("Showcard Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpToppings.Location = new Point(316, 107);
             grpToppings.Name = "grpToppings";
             grpToppings.Size = new Size(452, 149);
@@ -152,9 +160,10 @@
             // chkGreenPeppers
             // 
             chkGreenPeppers.AutoSize = true;
+            chkGreenPeppers.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             chkGreenPeppers.Location = new Point(246, 103);
             chkGreenPeppers.Name = "chkGreenPeppers";
-            chkGreenPeppers.Size = new Size(126, 24);
+            chkGreenPeppers.Size = new Size(133, 24);
             chkGreenPeppers.TabIndex = 5;
             chkGreenPeppers.Tag = "0.2";
             chkGreenPeppers.Text = "Green Peppers";
@@ -164,9 +173,11 @@
             // chkOlives
             // 
             chkOlives.AutoSize = true;
+            chkOlives.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            chkOlives.ForeColor = SystemColors.ControlText;
             chkOlives.Location = new Point(246, 70);
             chkOlives.Name = "chkOlives";
-            chkOlives.Size = new Size(71, 24);
+            chkOlives.Size = new Size(73, 24);
             chkOlives.TabIndex = 3;
             chkOlives.Tag = "0.1";
             chkOlives.Text = "Olives";
@@ -176,9 +187,11 @@
             // chkOnion
             // 
             chkOnion.AutoSize = true;
+            chkOnion.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            chkOnion.ForeColor = SystemColors.ControlText;
             chkOnion.Location = new Point(246, 32);
             chkOnion.Name = "chkOnion";
-            chkOnion.Size = new Size(71, 24);
+            chkOnion.Size = new Size(73, 24);
             chkOnion.TabIndex = 1;
             chkOnion.Tag = "0.2";
             chkOnion.Text = "Onion";
@@ -187,9 +200,12 @@
             // 
             // chkTomatoes
             // 
+            chkTomatoes.AutoSize = true;
+            chkTomatoes.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            chkTomatoes.ForeColor = SystemColors.ControlText;
             chkTomatoes.Location = new Point(33, 103);
             chkTomatoes.Name = "chkTomatoes";
-            chkTomatoes.Size = new Size(104, 24);
+            chkTomatoes.Size = new Size(100, 24);
             chkTomatoes.TabIndex = 4;
             chkTomatoes.Tag = "0.2";
             chkTomatoes.Text = "Tomatoes";
@@ -198,9 +214,10 @@
             // chkMushrooms
             // 
             chkMushrooms.AutoSize = true;
+            chkMushrooms.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             chkMushrooms.Location = new Point(33, 67);
             chkMushrooms.Name = "chkMushrooms";
-            chkMushrooms.Size = new Size(108, 24);
+            chkMushrooms.Size = new Size(115, 24);
             chkMushrooms.TabIndex = 2;
             chkMushrooms.Tag = "1";
             chkMushrooms.Text = "Mushrooms";
@@ -210,9 +227,10 @@
             // chkExtraCheese
             // 
             chkExtraCheese.AutoSize = true;
+            chkExtraCheese.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             chkExtraCheese.Location = new Point(33, 32);
             chkExtraCheese.Name = "chkExtraCheese";
-            chkExtraCheese.Size = new Size(115, 24);
+            chkExtraCheese.Size = new Size(120, 24);
             chkExtraCheese.TabIndex = 0;
             chkExtraCheese.Tag = "0.5";
             chkExtraCheese.Text = "Extra Cheese";
@@ -221,8 +239,10 @@
             // 
             // grpCrust
             // 
+            grpCrust.BackColor = Color.Transparent;
             grpCrust.Controls.Add(rdThickCrust);
             grpCrust.Controls.Add(rdThinCrust);
+            grpCrust.Font = new Font("Showcard Gothic", 10.2F);
             grpCrust.Location = new Point(94, 279);
             grpCrust.Name = "grpCrust";
             grpCrust.Size = new Size(186, 116);
@@ -233,11 +253,12 @@
             // rdThickCrust
             // 
             rdThickCrust.AutoSize = true;
+            rdThickCrust.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdThickCrust.ForeColor = SystemColors.ControlText;
             rdThickCrust.Location = new Point(30, 70);
             rdThickCrust.Name = "rdThickCrust";
-            rdThickCrust.Size = new Size(101, 24);
+            rdThickCrust.Size = new Size(108, 24);
             rdThickCrust.TabIndex = 3;
-            rdThickCrust.TabStop = true;
             rdThickCrust.Tag = "0.6";
             rdThickCrust.Text = "Thick Crust";
             rdThickCrust.UseVisualStyleBackColor = true;
@@ -246,9 +267,12 @@
             // rdThinCrust
             // 
             rdThinCrust.AutoSize = true;
+            rdThinCrust.Checked = true;
+            rdThinCrust.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdThinCrust.ForeColor = SystemColors.ControlText;
             rdThinCrust.Location = new Point(30, 26);
             rdThinCrust.Name = "rdThinCrust";
-            rdThinCrust.Size = new Size(95, 24);
+            rdThinCrust.Size = new Size(102, 24);
             rdThinCrust.TabIndex = 2;
             rdThinCrust.TabStop = true;
             rdThinCrust.Tag = "0.3";
@@ -258,8 +282,10 @@
             // 
             // grpWhereToEat
             // 
+            grpWhereToEat.BackColor = Color.Transparent;
             grpWhereToEat.Controls.Add(rdTakeOut);
             grpWhereToEat.Controls.Add(rdEatIn);
+            grpWhereToEat.Font = new Font("Showcard Gothic", 10.2F);
             grpWhereToEat.Location = new Point(316, 279);
             grpWhereToEat.Name = "grpWhereToEat";
             grpWhereToEat.Size = new Size(185, 116);
@@ -270,11 +296,12 @@
             // rdTakeOut
             // 
             rdTakeOut.AutoSize = true;
+            rdTakeOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdTakeOut.ForeColor = SystemColors.ControlText;
             rdTakeOut.Location = new Point(44, 70);
             rdTakeOut.Name = "rdTakeOut";
-            rdTakeOut.Size = new Size(87, 24);
+            rdTakeOut.Size = new Size(92, 24);
             rdTakeOut.TabIndex = 4;
-            rdTakeOut.TabStop = true;
             rdTakeOut.Tag = "0";
             rdTakeOut.Text = "Take Out";
             rdTakeOut.UseVisualStyleBackColor = true;
@@ -283,9 +310,12 @@
             // rdEatIn
             // 
             rdEatIn.AutoSize = true;
+            rdEatIn.Checked = true;
+            rdEatIn.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            rdEatIn.ForeColor = SystemColors.ControlText;
             rdEatIn.Location = new Point(44, 26);
             rdEatIn.Name = "rdEatIn";
-            rdEatIn.Size = new Size(67, 24);
+            rdEatIn.Size = new Size(70, 24);
             rdEatIn.TabIndex = 3;
             rdEatIn.TabStop = true;
             rdEatIn.Tag = "0.5";
@@ -295,6 +325,7 @@
             // 
             // grpOrderSummary
             // 
+            grpOrderSummary.BackColor = Color.Transparent;
             grpOrderSummary.Controls.Add(lblDollarsMark);
             grpOrderSummary.Controls.Add(lblTotalPriceSumValue);
             grpOrderSummary.Controls.Add(lblTotalPriceSum);
@@ -306,6 +337,7 @@
             grpOrderSummary.Controls.Add(lblToppingsSum);
             grpOrderSummary.Controls.Add(lblSizeSumValue);
             grpOrderSummary.Controls.Add(lblSizeSum);
+            grpOrderSummary.Font = new Font("Showcard Gothic", 10.2F);
             grpOrderSummary.Location = new Point(804, 107);
             grpOrderSummary.Name = "grpOrderSummary";
             grpOrderSummary.Size = new Size(250, 397);
@@ -423,7 +455,7 @@
             cmbHowManyPizzasValue.FormattingEnabled = true;
             cmbHowManyPizzasValue.IntegralHeight = false;
             cmbHowManyPizzasValue.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
-            cmbHowManyPizzasValue.Location = new Point(694, 333);
+            cmbHowManyPizzasValue.Location = new Point(715, 331);
             cmbHowManyPizzasValue.Name = "cmbHowManyPizzasValue";
             cmbHowManyPizzasValue.Size = new Size(53, 28);
             cmbHowManyPizzasValue.TabIndex = 6;
@@ -432,16 +464,20 @@
             // lblHowManyPizzas
             // 
             lblHowManyPizzas.AutoSize = true;
-            lblHowManyPizzas.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHowManyPizzas.BackColor = Color.Transparent;
+            lblHowManyPizzas.Font = new Font("Showcard Gothic", 10.2F);
             lblHowManyPizzas.Location = new Point(527, 332);
             lblHowManyPizzas.Name = "lblHowManyPizzas";
-            lblHowManyPizzas.Size = new Size(166, 25);
+            lblHowManyPizzas.Size = new Size(171, 21);
             lblHowManyPizzas.TabIndex = 11;
             lblHowManyPizzas.Text = "How Many Pizzas:";
             // 
             // btnNext
             // 
             btnNext.BackColor = Color.Transparent;
+            btnNext.FlatAppearance.BorderColor = Color.Black;
+            btnNext.FlatAppearance.BorderSize = 2;
+            btnNext.FlatStyle = FlatStyle.Flat;
             btnNext.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNext.ForeColor = Color.Black;
             btnNext.Location = new Point(516, 418);
@@ -455,6 +491,9 @@
             // btnReset
             // 
             btnReset.BackColor = Color.Transparent;
+            btnReset.FlatAppearance.BorderColor = Color.Black;
+            btnReset.FlatAppearance.BorderSize = 2;
+            btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReset.ForeColor = Color.Red;
             btnReset.Location = new Point(270, 418);
@@ -469,6 +508,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Pizza_Vampire_Logo_Transparenceid;
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1152, 516);
             Controls.Add(btnReset);
             Controls.Add(btnNext);
@@ -480,6 +521,7 @@
             Controls.Add(grpToppings);
             Controls.Add(grpSize);
             Controls.Add(lblMainMenuHeading);
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMainMenu";
             Text = "Pizza Vampires";
