@@ -159,13 +159,13 @@
             grpSum.Controls.Add(lblNameSumValue);
             grpSum.Controls.Add(lblPhoneSum);
             grpSum.Controls.Add(lblNameSum);
-            grpSum.Font = new Font("Showcard Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            grpSum.Font = new Font("Showcard Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             grpSum.Location = new Point(586, 126);
             grpSum.Name = "grpSum";
             grpSum.Size = new Size(554, 266);
             grpSum.TabIndex = 9;
             grpSum.TabStop = false;
-            grpSum.Text = "Summary";
+            grpSum.Text = "Info Summary";
             // 
             // lblLocationSumValue
             // 
