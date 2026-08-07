@@ -163,20 +163,20 @@ namespace Pizza_Make_Order_Project
         //                  START grpToppings work...
         //
         //This List is for the Texts of the check boxes inside the group box "grpToppings"
-        List<string> grp_chksTexts = new List<string>();
+        List<string> grpToppings_chksTexts = new List<string>();
 
         //This method is for the Texts of the check boxes inside the group box "grpToppings"
         //Its job is to Update the Toppings summary every time a CheckBox value Change.
         public void UpdateToppingsSumValue(CheckBox chkTemp)
         {
             if (chkTemp.Checked)
-                grp_chksTexts.Add(chkTemp.Text);
+                grpToppings_chksTexts.Add(chkTemp.Text);
 
             else
-                grp_chksTexts.Remove(chkTemp.Text);
+                grpToppings_chksTexts.Remove(chkTemp.Text);
 
 
-            lblToppingsSumValue.Text = String.Join(" ,", grp_chksTexts);
+            lblToppingsSumValue.Text = String.Join(" ,", grpToppings_chksTexts);
         }
 
         private void chkExtraCheese_CheckedChanged(object sender, EventArgs e)
