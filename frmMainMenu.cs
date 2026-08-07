@@ -2,18 +2,55 @@ namespace Pizza_Make_Order_Project
 {
     public partial class frmMainMenu : Form
     {
+        public void InitializeMainMenuForm()
+        {
+            // Size Initialize
+            rdSmallSize.Checked = true;
+            // Size Sum Initialize
+            lblSizeSumValue.Text = rdSmallSize.Text;
+
+
+            // Toppings Initialize
+            chkExtraCheese.Checked = false;
+            chkOnion.Checked = false;
+            chkMushrooms.Checked = false;
+            chkOlives.Checked = false;
+            chkTomatoes.Checked = false;
+            chkGreenPeppers.Checked = false;
+            // Toppings Sum Initialize
+            lblToppingsSumValue.Text = "";
+
+
+            // Crust Type Initialize
+            rdThinCrust.Checked = true;
+            // Crust Type Sum Initialize
+            lblCrustTypeSumValue.Text = rdThinCrust.Text;
+
+
+            // Where To Eat Initialize
+            rdTakeOut.Checked = true;
+            // Where To Eat Sum Initialize
+            lblWhereToEatSumValue.Text = rdTakeOut.Text;
+
+
+            // Total Price Sum Initialize
+            lblTotalPriceSumValue.Text = Convert.ToString(Convert.ToDecimal(rdSmallSize.Tag) + Convert.ToDecimal(rdThinCrust.Tag) + Convert.ToDecimal(rdTakeOut.Tag));
+
+
+            // How Many Pizzas Initialize
+            cmbHowManyPizzasValue.SelectedIndex = 0;
+        }
+
         public frmMainMenu()
         {
             InitializeComponent();
 
-            cmbHowManyPizzasValue.SelectedIndex = 0;
+            InitializeMainMenuForm();
         }
-
-        Double TotalPrice = 0;
 
         public void RecalculateTotalPrice()
         {
-            TotalPrice = 0;
+            Double TotalPrice = 0;
 
             short selecteditemincmb = (short)(cmbHowManyPizzasValue.SelectedIndex + 1);
 
@@ -254,13 +291,11 @@ namespace Pizza_Make_Order_Project
         {
             if (MessageBox.Show("Are You Sure You Want To Reset Your Order?",
                 "Reset",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Warning,
-                MessageBoxDefaultButton.Button2) == DialogResult.OK)
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                frmMainMenu frm_New_MainMenu = new frmMainMenu();
-                frm_New_MainMenu.Show();
-                this.Hide();
+                InitializeMainMenuForm();
             }
         }
 
