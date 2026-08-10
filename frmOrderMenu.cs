@@ -106,7 +106,7 @@ namespace Pizza_Make_Order_Project
             {
                 MessageBox.Show("Please Enter A Name Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txtPhoneValue.Text == String.Empty || txtPhoneValue.Text.Substring(0, 2) != "09")
+            else if (txtPhoneValue.Text == String.Empty || txtPhoneValue.Text.Substring(0, 2) != "09" || !txtPhoneValue.MaskFull)
             {
                 MessageBox.Show("Please Enter A Valid Phone Number Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

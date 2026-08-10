@@ -224,6 +224,7 @@
             // 
             // txtPhoneValue
             // 
+            txtPhoneValue.BeepOnError = true;
             txtPhoneValue.Font = new Font("Segoe UI", 10.2F);
             txtPhoneValue.Location = new Point(318, 173);
             txtPhoneValue.Mask = "0000-000-000";
