@@ -33,7 +33,6 @@
             lblHeadLine = new Label();
             txtNameValue = new TextBox();
             lblPhone = new Label();
-            txtPhoneValue = new TextBox();
             lblLocation = new Label();
             btnBack = new Button();
             btnOrder = new Button();
@@ -45,6 +44,7 @@
             lblPhoneSum = new Label();
             lblNameSum = new Label();
             txtLocationValue = new TextBox();
+            txtPhoneValue = new MaskedTextBox();
             grpSum.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             // 
             // txtNameValue
             // 
-            txtNameValue.BackColor = SystemColors.MenuBar;
+            txtNameValue.BackColor = SystemColors.Window;
             txtNameValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNameValue.Location = new Point(237, 126);
             txtNameValue.Name = "txtNameValue";
@@ -93,19 +93,6 @@
             lblPhone.Size = new Size(298, 25);
             lblPhone.TabIndex = 3;
             lblPhone.Text = "Please Enter Your Phone Number:";
-            // 
-            // txtPhoneValue
-            // 
-            txtPhoneValue.BackColor = SystemColors.MenuBar;
-            txtPhoneValue.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPhoneValue.Location = new Point(318, 173);
-            txtPhoneValue.MaxLength = 10;
-            txtPhoneValue.Name = "txtPhoneValue";
-            txtPhoneValue.Size = new Size(212, 30);
-            txtPhoneValue.TabIndex = 4;
-            txtPhoneValue.Tag = "example: 0900000000";
-            txtPhoneValue.Enter += txtPhoneValueEnter;
-            txtPhoneValue.Leave += txtPhoneValueLeave;
             // 
             // lblLocation
             // 
@@ -223,7 +210,7 @@
             // 
             // txtLocationValue
             // 
-            txtLocationValue.BackColor = SystemColors.MenuBar;
+            txtLocationValue.BackColor = SystemColors.Window;
             txtLocationValue.BorderStyle = BorderStyle.FixedSingle;
             txtLocationValue.Font = new Font("Segoe UI", 10.2F);
             txtLocationValue.Location = new Point(12, 282);
@@ -235,6 +222,15 @@
             txtLocationValue.Enter += txtLocationValueEnter;
             txtLocationValue.Leave += txtLocationValueLeave;
             // 
+            // txtPhoneValue
+            // 
+            txtPhoneValue.Font = new Font("Segoe UI", 10.2F);
+            txtPhoneValue.Location = new Point(318, 173);
+            txtPhoneValue.Mask = "0000-000-000";
+            txtPhoneValue.Name = "txtPhoneValue";
+            txtPhoneValue.Size = new Size(212, 30);
+            txtPhoneValue.TabIndex = 10;
+            // 
             // frmOrderMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -242,12 +238,12 @@
             BackgroundImage = Properties.Resources.Pizza_Vampire_Logo_Transparenceid;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1152, 516);
+            Controls.Add(txtPhoneValue);
             Controls.Add(txtLocationValue);
             Controls.Add(grpSum);
             Controls.Add(btnOrder);
             Controls.Add(btnBack);
             Controls.Add(lblLocation);
-            Controls.Add(txtPhoneValue);
             Controls.Add(lblPhone);
             Controls.Add(txtNameValue);
             Controls.Add(lblHeadLine);
@@ -269,7 +265,6 @@
         private Label lblHeadLine;
         private TextBox txtNameValue;
         private Label lblPhone;
-        private TextBox txtPhoneValue;
         private Label lblLocation;
         private Button btnBack;
         private Button btnOrder;
@@ -282,5 +277,6 @@
         private Label lblLocationSum;
         private Label lblLocationSumValue;
         private TextBox txtLocationValue;
+        private MaskedTextBox txtPhoneValue;
     }
 }

@@ -12,13 +12,6 @@ namespace Pizza_Make_Order_Project
 {
     public partial class frmOrderMenu : Form
     {
-        public frmOrderMenu()
-        {
-            InitializeComponent();
-            txtStartSetHolder(txtNameValue);
-            txtStartSetHolder(txtPhoneValue);
-            txtStartSetHolder(txtLocationValue);
-        }
         //These functions are to set holder when leave or enter a textbox
         private void txtStopSetHolder(TextBox txt)
         {
@@ -36,6 +29,13 @@ namespace Pizza_Make_Order_Project
                 txt.Text = Convert.ToString(txt.Tag);
                 return;
             }
+        }
+
+        public frmOrderMenu()
+        {
+            InitializeComponent();
+            txtStartSetHolder(txtNameValue);
+            txtStartSetHolder(txtLocationValue);
         }
 
         //This function is to fill a summary value label with a value
@@ -106,7 +106,7 @@ namespace Pizza_Make_Order_Project
             {
                 MessageBox.Show("Please Enter A Name Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txtPhoneValue.Text == String.Empty || txtPhoneValue.Text.Substring(0, 2) != "09" || txtPhoneValue.Text == Convert.ToString(txtPhoneValue.Tag))
+            else if (txtPhoneValue.Text == String.Empty || txtPhoneValue.Text.Substring(0, 2) != "09")
             {
                 MessageBox.Show("Please Enter A Valid Phone Number Vampire!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
