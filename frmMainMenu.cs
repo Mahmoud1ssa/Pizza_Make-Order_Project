@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Pizza_Make_Order_Project
 {
     public partial class frmMainMenu : Form
@@ -311,11 +313,24 @@ namespace Pizza_Make_Order_Project
                 this.Hide();
                 objfrmOrderMenu.ShowDialog();
 
-                if(Convert.ToInt32(objfrmOrderMenu.Tag) == 0)
+                if (Convert.ToInt32(objfrmOrderMenu.Tag) == 0)
                     this.Show();
                 else
                     this.Close();
             }
+        }
+
+        private void lnkLinkedIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //This Command makes the site that you have visited marke with visited color "Blue"...
+            lnkLinkedIn.LinkVisited = true;
+
+            //Process is a class... and its job is to open a program inside the computer or a Web Explorer or any thing.
+            //Start is the function that does the job of opening a program or any thing.
+            //this command sais: open this WebPage using the default WebExplorer on the current Cumputer.
+            //UseShellExecute = true... You are using Shell to open the default explorer... and it must be "true" so the operation goes fine.
+            //ProcessStartInfo... you are creating an object of class that has the options to open the comming thing.
+            Process.Start(new ProcessStartInfo("https://www.linkedin.com/in/dev-mahmoud-issa-6a98b0390/") { UseShellExecute = true });
         }
     }
 }

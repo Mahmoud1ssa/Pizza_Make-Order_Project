@@ -63,6 +63,8 @@
             lblHowManyPizzas = new Label();
             btnNext = new Button();
             btnReset = new Button();
+            label1 = new Label();
+            lnkLinkedIn = new LinkLabel();
             grpSize.SuspendLayout();
             grpToppings.SuspendLayout();
             grpCrust.SuspendLayout();
@@ -504,6 +506,29 @@
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(941, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 17);
+            label1.TabIndex = 17;
+            label1.Text = "LinkedIn:";
+            // 
+            // lnkLinkedIn
+            // 
+            lnkLinkedIn.AutoSize = true;
+            lnkLinkedIn.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lnkLinkedIn.LinkBehavior = LinkBehavior.HoverUnderline;
+            lnkLinkedIn.Location = new Point(1006, 32);
+            lnkLinkedIn.Name = "lnkLinkedIn";
+            lnkLinkedIn.Size = new Size(123, 17);
+            lnkLinkedIn.TabIndex = 18;
+            lnkLinkedIn.TabStop = true;
+            lnkLinkedIn.Text = "Dev. Mahmoud Issa";
+            lnkLinkedIn.LinkClicked += lnkLinkedIn_LinkClicked;
+            // 
             // frmMainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -511,6 +536,8 @@
             BackgroundImage = Properties.Resources.Pizza_Vampire_Logo_Transparenceid;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1152, 516);
+            Controls.Add(lnkLinkedIn);
+            Controls.Add(label1);
             Controls.Add(btnReset);
             Controls.Add(btnNext);
             Controls.Add(lblHowManyPizzas);
@@ -521,6 +548,7 @@
             Controls.Add(grpToppings);
             Controls.Add(grpSize);
             Controls.Add(lblMainMenuHeading);
+            Cursor = Cursors.Hand;
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMainMenu";
@@ -575,5 +603,7 @@
         private Label lblHowManyPizzas;
         private Button btnNext;
         private Button btnReset;
+        private Label label1;
+        private LinkLabel lnkLinkedIn;
     }
 }
