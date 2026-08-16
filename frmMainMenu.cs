@@ -37,10 +37,6 @@ namespace Pizza_Make_Order_Project
 
             // Total Price Sum Initialize
             lblTotalPriceSumValue.Text = Convert.ToString(Convert.ToDecimal(rdSmallSize.Tag) + Convert.ToDecimal(rdThinCrust.Tag) + Convert.ToDecimal(rdTakeOut.Tag));
-
-
-            // How Many Pizzas Initialize
-            cmbHowManyPizzasValue.SelectedIndex = 0;
         }
 
         public frmMainMenu()
@@ -54,7 +50,7 @@ namespace Pizza_Make_Order_Project
         {
             Double TotalPrice = 0;
 
-            short selecteditemincmb = (short)(cmbHowManyPizzasValue.SelectedIndex + 1);
+            short nudCurrentValue = (short)(nudHowManyPizzasValue.Value);
 
             //START grpToppings checkboxes
             foreach (Control ctrlTemp in grpToppings.Controls)
@@ -63,17 +59,17 @@ namespace Pizza_Make_Order_Project
                 {
                     switch (chkTemp.Name)
                     {
-                        case "chkExtraCheese": TotalPrice += Convert.ToDouble(chkTemp.Tag) * selecteditemincmb; break;
+                        case "chkExtraCheese": TotalPrice += Convert.ToDouble(chkTemp.Tag) * nudCurrentValue; break;
 
-                        case "chkMushrooms": TotalPrice += Convert.ToDouble(chkTemp.Tag) * selecteditemincmb; break;
+                        case "chkMushrooms": TotalPrice += Convert.ToDouble(chkTemp.Tag) * nudCurrentValue; break;
 
-                        case "chkTomatoes": TotalPrice += Convert.ToDouble(chkTemp.Tag) * selecteditemincmb; break;
+                        case "chkTomatoes": TotalPrice += Convert.ToDouble(chkTemp.Tag) * nudCurrentValue; break;
 
-                        case "chkOnion": TotalPrice += Convert.ToDouble(chkTemp.Tag) * selecteditemincmb; break;
+                        case "chkOnion": TotalPrice += Convert.ToDouble(chkTemp.Tag) * nudCurrentValue; break;
 
-                        case "chkOlives": TotalPrice += Convert.ToDouble(chkTemp.Tag) * selecteditemincmb; break;
+                        case "chkOlives": TotalPrice += Convert.ToDouble(chkTemp.Tag) * nudCurrentValue; break;
 
-                        case "chkGreenPeppers": TotalPrice += Convert.ToDouble(chkTemp.Tag) * selecteditemincmb; break;
+                        case "chkGreenPeppers": TotalPrice += Convert.ToDouble(chkTemp.Tag) * nudCurrentValue; break;
                     }
                 }
             }
@@ -86,11 +82,11 @@ namespace Pizza_Make_Order_Project
                 {
                     switch (rdTemp.Name)
                     {
-                        case "rdSmallSize": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdSmallSize": TotalPrice += Convert.ToDouble(rdTemp.Tag) * nudCurrentValue; break;
 
-                        case "rdMediumSize": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdMediumSize": TotalPrice += Convert.ToDouble(rdTemp.Tag) * nudCurrentValue; break;
 
-                        case "rdLargeSize": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdLargeSize": TotalPrice += Convert.ToDouble(rdTemp.Tag) * nudCurrentValue; break;
                     }
                 }
             }
@@ -103,9 +99,9 @@ namespace Pizza_Make_Order_Project
                 {
                     switch (rdTemp.Name)
                     {
-                        case "rdThinCrust": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdThinCrust": TotalPrice += Convert.ToDouble(rdTemp.Tag) * nudCurrentValue; break;
 
-                        case "rdThickCrust": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdThickCrust": TotalPrice += Convert.ToDouble(rdTemp.Tag) * nudCurrentValue; break;
                     }
                 }
             }
@@ -120,7 +116,7 @@ namespace Pizza_Make_Order_Project
                     {
                         case "rdEatIn":
                             {
-                                switch (selecteditemincmb)
+                                switch (nudCurrentValue)
                                 {
                                     case >= 1 and <= 4:
                                         {
@@ -152,7 +148,7 @@ namespace Pizza_Make_Order_Project
                                 break;
                             }
 
-                        case "rdTakeOut": TotalPrice += Convert.ToDouble(rdTemp.Tag) * selecteditemincmb; break;
+                        case "rdTakeOut": TotalPrice += Convert.ToDouble(rdTemp.Tag) * nudCurrentValue; break;
                     }
                 }
             }
@@ -282,13 +278,16 @@ namespace Pizza_Make_Order_Project
         }
 
         //
-        //                  START cmbHowManyPizzas work...
+        //                  START nudHowManyPizzasValue work...
         //
-        private void cmbHowManyPizzasValue_SelectedIndexChanged(object sender, EventArgs e)
+        private void nudHowManyPizzasValue_ValueChanged(object sender, EventArgs e)
         {
             RecalculateTotalPrice();
         }
 
+        //
+        //                  START btn work...
+        //
         private void btnReset_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are You Sure You Want To Reset Your Order?",
@@ -320,6 +319,9 @@ namespace Pizza_Make_Order_Project
             }
         }
 
+        //
+        //                  START lnkLinkedIn work...
+        //
         private void lnkLinkedIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //This Command makes the site that you have visited marke with visited color "Blue"...

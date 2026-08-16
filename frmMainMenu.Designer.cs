@@ -59,17 +59,18 @@
             lblToppingsSum = new Label();
             lblSizeSumValue = new Label();
             lblSizeSum = new Label();
-            cmbHowManyPizzasValue = new ComboBox();
             lblHowManyPizzas = new Label();
             btnNext = new Button();
             btnReset = new Button();
             label1 = new Label();
             lnkLinkedIn = new LinkLabel();
+            nudHowManyPizzasValue = new NumericUpDown();
             grpSize.SuspendLayout();
             grpToppings.SuspendLayout();
             grpCrust.SuspendLayout();
             grpWhereToEat.SuspendLayout();
             grpOrderSummary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudHowManyPizzasValue).BeginInit();
             SuspendLayout();
             // 
             // lblMainMenuHeading
@@ -451,18 +452,6 @@
             lblSizeSum.TabIndex = 6;
             lblSizeSum.Text = "Size:";
             // 
-            // cmbHowManyPizzasValue
-            // 
-            cmbHowManyPizzasValue.DropDownHeight = 100;
-            cmbHowManyPizzasValue.FormattingEnabled = true;
-            cmbHowManyPizzasValue.IntegralHeight = false;
-            cmbHowManyPizzasValue.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" });
-            cmbHowManyPizzasValue.Location = new Point(715, 331);
-            cmbHowManyPizzasValue.Name = "cmbHowManyPizzasValue";
-            cmbHowManyPizzasValue.Size = new Size(53, 28);
-            cmbHowManyPizzasValue.TabIndex = 6;
-            cmbHowManyPizzasValue.SelectedIndexChanged += cmbHowManyPizzasValue_SelectedIndexChanged;
-            // 
             // lblHowManyPizzas
             // 
             lblHowManyPizzas.AutoSize = true;
@@ -529,6 +518,17 @@
             lnkLinkedIn.Text = "Dev. Mahmoud Issa";
             lnkLinkedIn.LinkClicked += lnkLinkedIn_LinkClicked;
             // 
+            // nudHowManyPizzasValue
+            // 
+            nudHowManyPizzasValue.Location = new Point(715, 332);
+            nudHowManyPizzasValue.Maximum = new decimal(new int[] { 20, 0, 0, 0 });
+            nudHowManyPizzasValue.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudHowManyPizzasValue.Name = "nudHowManyPizzasValue";
+            nudHowManyPizzasValue.Size = new Size(53, 27);
+            nudHowManyPizzasValue.TabIndex = 6;
+            nudHowManyPizzasValue.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudHowManyPizzasValue.ValueChanged += nudHowManyPizzasValue_ValueChanged;
+            // 
             // frmMainMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -536,12 +536,12 @@
             BackgroundImage = Properties.Resources.Pizza_Vampire_Logo_Transparenceid;
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(1152, 516);
+            Controls.Add(nudHowManyPizzasValue);
             Controls.Add(lnkLinkedIn);
             Controls.Add(label1);
             Controls.Add(btnReset);
             Controls.Add(btnNext);
             Controls.Add(lblHowManyPizzas);
-            Controls.Add(cmbHowManyPizzasValue);
             Controls.Add(grpOrderSummary);
             Controls.Add(grpWhereToEat);
             Controls.Add(grpCrust);
@@ -563,6 +563,7 @@
             grpWhereToEat.PerformLayout();
             grpOrderSummary.ResumeLayout(false);
             grpOrderSummary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudHowManyPizzasValue).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -599,11 +600,11 @@
         private Label lblCrustTypeSumValue;
         private Label lblDollarsMark;
         private Label lblTotalPriceSumValue;
-        private ComboBox cmbHowManyPizzasValue;
         private Label lblHowManyPizzas;
         private Button btnNext;
         private Button btnReset;
         private Label label1;
         private LinkLabel lnkLinkedIn;
+        private NumericUpDown nudHowManyPizzasValue;
     }
 }
